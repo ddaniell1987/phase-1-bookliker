@@ -65,9 +65,11 @@ function addingLikesFromUsers(e, user, book) {
             body: JSON.stringify
         }
         .then(response => response.json())
-        .then(response => console.log(response))
-    }
-},
+        .then(response => {
+            console.log(response)
+        
+    })
+}
 function randomlyGetUser(){
     fetch("http://localhost:3000/users")
     .then(response => response.json())
@@ -82,5 +84,5 @@ function randomlyGetUser(){
             randomNumberGenerator()
         }
         }
-    })
-}
+    },
+})
